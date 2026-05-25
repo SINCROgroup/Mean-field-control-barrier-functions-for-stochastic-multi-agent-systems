@@ -1,4 +1,4 @@
-# LF_MFCBF_2
+# Mean-field control barrier functions for stochastic multi-agent systems 
 
 MATLAB code for simulating two multi-agent scenarios in a periodic 2D domain with dangerous disks:
 
@@ -20,6 +20,12 @@ This public repository is intended to provide the simulation code. Plotting scri
   Runs the diffusive follower-only experiment for 50 realizations and saves trajectories and safety metrics.
 
 ### Core helper functions
+
+-`kernel_potential_fft.m`
+  Computes the convolution between the obstacle density rho_o_norm and a Gaussian kernel, its spatial gradient and the laplacian 
+
+- `compute_safe_velocity_Rk_grid.m`
+  Applies the CBF-based safety filter using the density-based quantities pre-computed via `kernel_potential_fft.m`
 
 - `compute_q_T.m`
   Builds the periodic interaction kernel used in the shepherding model.
