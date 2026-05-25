@@ -4,6 +4,8 @@ MATLAB code for simulating two multi-agent scenarios in a periodic 2D domain wit
 
 - `main_shepherding.m`: leader-follower / shepherding experiment with Control Barrier Functions (CBFs)
 - `main_coverage.m`: diffusive coverage-style experiment with CBF safety filtering
+- `main_shepherding_fast.m`: faster code for main_shepherding.m
+- `main_coverage_fast.m`: faster code for main_coverage.m
 
 This public repository is intended to provide the simulation code. Plotting scripts and large simulation datasets may be kept separate from the GitHub version.
 
