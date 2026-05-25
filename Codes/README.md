@@ -16,8 +16,15 @@ This public repository is intended to provide the simulation code. Plotting scri
 - `main_shepherding.m`
   Runs the leader-follower simulation for 50 realizations, saves trajectories and safety/performance metrics.
 
+- `main_shepherding_fast.m`
+  Fast version code of `main_shepherding.m`
+
 - `main_coverage.m`
   Runs the diffusive follower-only experiment for 50 realizations and saves trajectories and safety metrics.
+
+- `main_coverage_fast.m`
+   Fast version code of `main_coverage.m`
+
 
 ### Core helper functions
 
@@ -77,12 +84,14 @@ For the shepherding experiment:
 
 ```matlab
 main_shepherding
+main_shepherding_fast
 ```
 
 For the coverage experiment:
 
 ```matlab
 main_coverage
+main_coverage_fast 
 ```
 
 The generated outputs are stored locally in the folders created by the main scripts.
