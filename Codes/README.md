@@ -28,7 +28,7 @@ This public repository is intended to provide the simulation code. Plotting scri
 
 ### Core helper functions
 
--`kernel_potential_fft.m`
+- `kernel_potential_fft.m`
   Computes the convolution between the obstacle density rho_o_norm and a Gaussian kernel, its spatial gradient and the laplacian 
 
 - `compute_safe_velocity_Rk_grid.m`
