@@ -6,10 +6,8 @@ function [U, U_grid] = leaders_control_macropt(Xl, x, y, L, Xext, Yext, Ml, d_kl
 
 % Extend the field by one layer of cells so interpolation remains
 % well-defined close to the periodic boundaries.
-u1 = [u1(:, end), u1, u1(:, 1)];
-u1 = [u1(end, :); u1; u1(1, :)];
-u2 = [u2(:, end), u2, u2(:, 1)];
-u2 = [u2(end, :); u2; u2(1, :)];
+u1 = extendPeriodicField(u1);
+u2 = extendPeriodicField(u2);
 
 % Sample the feedback field at the current leader positions.
 U1 = interp2(Xext, Yext, -100*u1, Xl(:, 1), Xl(:, 2));

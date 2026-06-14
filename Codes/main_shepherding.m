@@ -28,10 +28,8 @@ Lr = L;%length scale of repulsive interactions
 [q_T_x,q_T_y] = compute_q_T(X', Y',50, 2*L, 2*L, Lr);
 f1 = -q_T_x';
 f2 = -q_T_y';
-f1 = [f1(:, end), f1, f1(:, 1)];
-f1 = [f1(end, :); f1; f1(1, :)];
-f2 = [f2(:, end), f2, f2(:, 1)];
-f2 = [f2(end, :); f2; f2(1, :)];
+f1 = extendPeriodicField(f1);
+f2 = extendPeriodicField(f2);
 
 %Desired follower density 
 mu = 0;
